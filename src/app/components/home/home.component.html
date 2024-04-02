@@ -1,1 +1,26 @@
-<p>home works!</p>
+@if(type ==1){
+<h1>hello 1</h1>
+}@else{
+<h1>hello 2</h1>
+}
+
+@switch(type){
+    @case (1){
+        <p>hello 1</p>
+    }
+    @case (2){
+        <p>hello 2</p>
+    }
+    @case (3){
+        <p>hello 3</p>
+    }
+    @default{
+        <p>hello</p>
+    }
+}
+
+@for( item of count; track $index){
+    <h1>no.: {{item}}</h1>
+}@empty {
+    <h1>no element in array</h1>
+}
