@@ -1,14 +1,15 @@
 <p>product-card works!</p>
 <mat-card class="shadow">
     <img mat-card-img class=" !h-80"
-        src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/s/q/9-ultraboost-phylon-white-green-9-killer-ultraboost-white-green-original-imagt4sze4uhyenb.jpeg?q=70">
+        [src]="product.image">
+        {{product | json}}
     <div>
-        <h1>Product Name</h1>
-        <h1>Product Brand</h1>
+        <h1>{{product.name}}</h1>
+        <h1>{{product.brand}}</h1>
         <div class="flex gap-2">
-            <span> Rs. 1000</span>
-            <span><s>Rs. 2000</s></span>
-            <span>(50%) OFF</span>
+            <span> Rs. {{product.currentPrice}}</span>
+            <span><s>Rs. {{product.standerdPrice}}</s></span>
+            <span>( {{product.discount}}%) OFF</span>
         </div>
     </div>
 </mat-card>
