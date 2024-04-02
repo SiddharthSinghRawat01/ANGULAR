@@ -1,26 +1,9 @@
-@if(type ==1){
-<h1>hello 1</h1>
-}@else{
-<h1>hello 2</h1>
-}
-
-@switch(type){
-    @case (1){
-        <p>hello 1</p>
+<div class = "p-8 mt- 4">
+<div class = "flex flex-wrap gap-2">
+    @for(item of products; track $index){
+        <div class="w-4/12 pr-2">
+            <app-product-card></app-product-card>
+        </div>
     }
-    @case (2){
-        <p>hello 2</p>
-    }
-    @case (3){
-        <p>hello 3</p>
-    }
-    @default{
-        <p>hello</p>
-    }
-}
-
-@for( item of count; track $index){
-    <h1>no.: {{item}}</h1>
-}@empty {
-    <h1>no element in array</h1>
-}
+</div>
+</div>
