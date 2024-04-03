@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { CommonModule } from '@angular/common';
+import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductCardComponent, CommonModule],
+  imports: [ProductCardComponent, CommonModule, SearchComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -65,9 +66,14 @@ export class HomeComponent {
     name: "T-shirt"
   }]
 
-  onViewProduct(event:any){
-    console.log("onViewProduct",event);
+  onViewProduct(event: any) {
+    console.log("onViewProduct", event);
     
+  }
+
+  onSearch(search: string){
+
+    console.log('onSearch Call',search);
   }
 
 }
