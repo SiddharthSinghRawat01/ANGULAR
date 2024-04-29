@@ -13,7 +13,7 @@ export class SearchComponent {
 
   onSearch() {
     console.log("onSearch call");
-    this.search.emit()
+    this.search.emit(this.text);
   }
 
   text =""

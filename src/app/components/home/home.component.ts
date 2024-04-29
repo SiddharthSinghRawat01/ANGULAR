@@ -27,7 +27,7 @@ export class HomeComponent {
     currentPrice: "150",
     standerdPrice: "300",
     discount: "50",
-    name: "T-shirt"
+    name: "PANT"
   },
   {
     "id": "3",
@@ -36,7 +36,7 @@ export class HomeComponent {
     currentPrice: "150",
     standerdPrice: "300",
     discount: "50",
-    name: "T-shirt"
+    name: "SHIRT  "
   },
   {
     "id": "4",
@@ -45,7 +45,7 @@ export class HomeComponent {
     currentPrice: "150",
     standerdPrice: "300",
     discount: "50",
-    name: "T-shirt"
+    name: "shirt"
   },
   {
     "id": "5",
@@ -66,6 +66,12 @@ export class HomeComponent {
     name: "T-shirt"
   }]
 
+  filteredProduct:any[]=[];
+  
+  ngOnInit(){
+    this.filteredProduct= this.products;
+  }
+
   onViewProduct(event: any) {
     console.log("onViewProduct", event);
     
@@ -73,7 +79,12 @@ export class HomeComponent {
 
   onSearch(search: string){
 
-    console.log('onSearch Call',search);
+    console.log('home',search);
+    if(search){
+      this.filteredProduct=this.products.filter(x=>x.name.includes(search));
+    }else{
+      this.filteredProduct=this.products
+    }
   }
 
 }
