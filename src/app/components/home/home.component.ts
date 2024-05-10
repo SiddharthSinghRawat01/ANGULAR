@@ -81,7 +81,7 @@ export class HomeComponent {
 
     console.log('home',search);
     if(search){
-      this.filteredProduct=this.products.filter(x=>x.name.includes(search));
+      this.filteredProduct=this.products.filter(x=>x.name.toLowerCase().includes(search.toLowerCase()));
     }else{
       this.filteredProduct=this.products
     }
