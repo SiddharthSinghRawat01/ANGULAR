@@ -12,28 +12,31 @@ import { ProductService } from '../../product.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  products:any[]=[];
-  filteredProduct:any[]=[];
+  products: any[] = [];
+  filteredProduct: any[] = [];
 
   productService = inject(ProductService);
-  
-  ngOnInit(){
-    this.products = this.productService.products;
-    this.filteredProduct= this.products;
+
+  ngOnInit() {
+    this.productService.getProducts().subscribe((result: any[]) => {
+      console.log(result);
+      this.products = result as any[];
+      this.filteredProduct = this.products;
+    });
   }
 
   onViewProduct(event: any) {
     console.log("onViewProduct", event);
-    
+
   }
 
-  onSearch(search: string){
+  onSearch(search: string) {
 
-    console.log('home',search);
-    if(search){
-      this.filteredProduct=this.products.filter(x=>x.name.toLowerCase().includes(search.toLowerCase()));
-    }else{
-      this.filteredProduct=this.products
+    console.log('home', search);
+    if (search) {
+      this.filteredProduct = this.products.filter(x => x.name.toLowerCase().includes(search.toLowerCase()));
+    } else {
+      this.filteredProduct = this.products
     }
   }
 
