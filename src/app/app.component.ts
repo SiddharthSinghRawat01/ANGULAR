@@ -13,7 +13,4 @@ import { HeaderComponent } from './components/header/header.component';
 })
 export class AppComponent {
   title = 'pdfDrawing';
-  test = 'This is a test case.'
-  a = 5;
-  b = 6;
 }
