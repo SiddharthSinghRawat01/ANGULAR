@@ -3,6 +3,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from '../search/search.component';
 import { ProductService } from '../../product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +15,8 @@ import { ProductService } from '../../product.service';
 export class HomeComponent {
   products: any[] = [];
   filteredProduct: any[] = [];
-
   productService = inject(ProductService);
+  router = inject(Router);
 
   ngOnInit() {
     this.productService.getProducts().subscribe((result: any[]) => {
@@ -27,7 +28,7 @@ export class HomeComponent {
 
   onViewProduct(event: any) {
     console.log("onViewProduct", event);
-
+    this.router.navigateByUrl("/product/"+event)
   }
 
   onSearch(search: string) {
