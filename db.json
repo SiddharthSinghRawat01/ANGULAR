@@ -55,7 +55,7 @@
       "name": "T-shirt"
     },
     {
-      "id": "1",
+      "id": "7",
       "brand": "Heref&Now",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/s/q/9-ultraboost-phylon-white-green-9-killer-ultraboost-white-green-original-imagt4sze4uhyenb.jpeg?q=70",
       "currentPrice": "150",
@@ -64,7 +64,7 @@
       "name": "T-shirt"
     },
     {
-      "id": "2",
+      "id": "8",
       "brand": "Heref&Now",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/3/j/v/xxl-st10-vebnor-original-imagnvrqgv7e5crg.jpeg?q=70",
       "currentPrice": "150",
@@ -73,7 +73,7 @@
       "name": "PANT"
     },
     {
-      "id": "3",
+      "id": "9",
       "brand": "Heref&Now",
       "image": "https://www.merchantmarine.co.in/cdn/shop/products/5014PCSS508M_2_600x.jpg?v=1662485390",
       "currentPrice": "150",
@@ -82,7 +82,7 @@
       "name": "SHIRT  "
     },
     {
-      "id": "4",
+      "id": "10",
       "brand": "Heref&Now",
       "image": "https://www.merchantmarine.co.in/cdn/shop/products/5018PCSS524M_2_600x.jpg?v=1662485513",
       "currentPrice": "150",
@@ -91,7 +91,7 @@
       "name": "shirt"
     },
     {
-      "id": "5",
+      "id": "11",
       "brand": "Heref&Now",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/3/j/v/xxl-st10-vebnor-original-imagnvrqgv7e5crg.jpeg?q=70",
       "currentPrice": "150",
@@ -100,7 +100,7 @@
       "name": "T-shirt"
     },
     {
-      "id": "6",
+      "id": "12",
       "brand": "Heref&Now",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/3/j/v/xxl-st10-vebnor-original-imagnvrqgv7e5crg.jpeg?q=70",
       "currentPrice": "150",
@@ -109,12 +109,12 @@
       "name": "T-shirt"
     },
     {
-      "id": "289d",
-      "name": "shirt",
+      "id": "13",
+      "name": "Pant",
       "brand": "Pintrest",
       "image": "https://i.pinimg.com/564x/06/77/58/0677580828968caa2b2e8568a6df3a99.jpg",
       "currentPrice": "400",
-      "standerdPrice": "800",
+      "standardPrice": "",
       "discount": "50"
     }
   ]
