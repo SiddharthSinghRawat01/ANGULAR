@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { Product } from '../../types/product';
 import { ProductService } from '../../product.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-edit-product',
   standalone: true,
@@ -17,6 +17,7 @@ export class EditProductComponent {
   formBuilder = inject(FormBuilder);
   productService= inject(ProductService);
   activetedRoute = inject(ActivatedRoute);
+  toastrService = inject(ToastrService );
   router = inject(Router);
   productForm: FormGroup = this.formBuilder.group({
     id: [''],
@@ -38,12 +39,12 @@ export class EditProductComponent {
 
   editProduct() {
     if(this.productForm.invalid) {
-      alert ("please provide all feild with  valid input")
+      this.toastrService.error ("please provide all feild with  valid input")
       return
     }
     console.log("for edit",this.productForm.value);
     this.productService.updateProduct(this.productForm.value).subscribe(result=>{
-      alert("product updated");
+      this.toastrService.success ("product updated");
       this.router.navigateByUrl("/");
     })
   }

@@ -2,12 +2,12 @@
   "products": [
     {
       "id": "1",
+      "name": "T-shirt",
       "brand": "Heref&Now",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/s/q/9-ultraboost-phylon-white-green-9-killer-ultraboost-white-green-original-imagt4sze4uhyenb.jpeg?q=70",
       "currentPrice": "150",
-      "standerdPrice": "300",
-      "discount": "50",
-      "name": "T-shirt"
+      "standardPrice": "",
+      "discount": "50"
     },
     {
       "id": "2",
