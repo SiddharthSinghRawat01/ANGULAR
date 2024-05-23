@@ -10,17 +10,17 @@ import { RouterLink } from '@angular/router';
   imports: [MatIconModule,MatButtonModule,MatToolbarModule,RouterLink],
   /* to use singe file component we delete the html css file and insted of
   templateUrl and styleUrl we will use template and style */
-  // templateUrl: './header.component.html',
-  // styleUrl: './header.component.scss'
-  template: `
-   <mat-toolbar color="primary" routerLink="/">
-    <button mat-icon-button  >
-      <mat-icon>home</mat-icon>
-    </button>
-    <span>My Product Management</span>
-  </mat-toolbar>
-  `,
-  styles: ``
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss'
+  // template: `
+  //  <mat-toolbar color="primary" routerLink="/">
+  //   <button mat-icon-button  >
+  //     <mat-icon>home</mat-icon>
+  //   </button>
+  //   <span>My Product Management</span>
+  // </mat-toolbar>
+  // `,
+  // styles: ``
 })
 export class HeaderComponent {
 
