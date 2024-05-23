@@ -6,8 +6,8 @@
         <h1>{{product.name | uppercase}}</h1>
         <h1>{{product.brand | uppercase}}</h1>
         <div class="flex gap-2">
-            <span> Rs. {{product.currentPrice}}</span>
-            <span><s>Rs. {{product.standerdPrice}}</s></span>
+            <span> {{product.currentPrice | rupee}}</span>
+            <span><s>{{product.standerdPrice | rupee}}</s></span>
             <span>( {{product.discount}}%) OFF</span>
         </div>
         <div class="flex justify-center">
