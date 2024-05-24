@@ -10,20 +10,26 @@ export class ProductService {
   products = [];
   constructor() { };
 
-  getProducts(){
+  getProducts() {
     return this.httpClient.get<Product[]>("http://localhost:3000/products");
   }
 
-  getProductById(id:number){
-    return this.httpClient.get<Product>("http://localhost:3000/products/"+id);
+  getProductById(id: number) {
+    return this.httpClient.get<Product>("http://localhost:3000/products/" + id);
   }
 
-  addProduct(product:Product){
-    return this.httpClient.post<Product>("http://localhost:3000/products",product);
+  addProduct(product: Product) {
+    return this.httpClient.post<Product>("http://localhost:3000/products", product);
   }
 
-  updateProduct(product:Product){
-    return this.httpClient.put<Product>("http://localhost:3000/products/"+product.id,product);
+  updateProduct(product: Product) {
+    return this.httpClient.put<Product>("http://localhost:3000/products/" + product.id, product);
   }
-  
+
+  userData(data: any) {
+    this.httpClient.get<any>("http://localhost:3000/users").subscribe(result => {
+      console.log(result);
+    });
+
+  }
 }

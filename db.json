@@ -118,5 +118,11 @@
       "discount": "50"
     }
   ],
-  "user": []
+  "users": [
+    {
+      "id": "1",
+      "email":"test@123.com",
+      "password": "test123"
+    }
+  ]
 }

@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ProductService } from '../../product.service';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class LoginComponent {
 formBuilder = inject(FormBuilder);
+productService = inject(ProductService);
 
 loginForm: FormGroup = this.formBuilder.group({
     email: [''],
@@ -28,8 +30,8 @@ loginForm: FormGroup = this.formBuilder.group({
 
 
   onSubmit(){
-    console.log("onSubmit",this.loginForm.value);
-    
+    console.log("onSubmit login form",this.loginForm.value);
+    this.productService.userData(this.loginForm.value)
   }
 
 }
